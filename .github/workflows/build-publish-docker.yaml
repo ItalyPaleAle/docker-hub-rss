@@ -50,7 +50,7 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           tags: |
-            ghcr.io/${{ env.REPO_OWNER }}/docker-hub-rss:latest
+            ghcr.io/${{ env.REPO_OWNER }}/docker-hub-rss:edge
           push: true
 
       # Uses cache instead of rebuilding
@@ -62,5 +62,6 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           tags: |
+            ghcr.io/${{ env.REPO_OWNER }}/docker-hub-rss:latest
             ghcr.io/${{ env.REPO_OWNER }}/docker-hub-rss:${VERSION}
           push: true
